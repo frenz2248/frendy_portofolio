@@ -49,7 +49,6 @@ export function Hero() {
       id="hero"
       className="min-h-screen bg-gradient-to-br from-[#031930] via-[#062a50] to-[#0e2a4d] flex items-center px-4 md:px-10 lg:px-32 relative overflow-hidden"
     >
-      {/* Animated background blur - left */}
       <motion.div
         className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-[#3684DB]/30 rounded-full blur-3xl z-0"
         style={{
@@ -59,7 +58,6 @@ export function Hero() {
         }}
       />
 
-      {/* Animated background blur - right */}
       <motion.div
         className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-[#D1DDED]/10 rounded-full blur-2xl z-0"
         style={{
@@ -70,7 +68,6 @@ export function Hero() {
       />
 
       <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 z-10">
-        {/* Text Section */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -78,7 +75,7 @@ export function Hero() {
           className="text-left text-[#D1DDED] max-w-2xl"
         >
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.7 }}
@@ -86,7 +83,7 @@ export function Hero() {
             Hello, I'm
           </motion.h1>
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.7 }}
@@ -95,7 +92,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-[#9DB5CB] mb-2"
+            className="text-base sm:text-lg md:text-xl text-[#9DB5CB] mb-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -105,7 +102,7 @@ export function Hero() {
           </motion.p>
 
           <motion.p
-            className="text-lg mb-4"
+            className="text-sm sm:text-base md:text-lg mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -126,12 +123,11 @@ export function Hero() {
           </motion.a>
         </motion.div>
 
-        {/* Profile Picture with rotating border */}
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative w-72 h-72 md:w-[24rem] md:h-[24rem] rounded-full shadow-2xl border-[6px] border-[#3684DB] overflow-hidden"
+          className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[24rem] lg:h-[24rem] rounded-full shadow-2xl border-[6px] border-[#3684DB] overflow-hidden"
         >
           <motion.div
             animate={{ rotate: 360 }}

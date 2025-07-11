@@ -34,7 +34,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="h-screen px-6 py-12 max-w-7xl mx-auto text-center flex flex-col justify-center"
+      className="min-h-screen px-4 py-12 max-w-7xl mx-auto text-center flex flex-col justify-center"
     >
       <motion.h2
         className="text-3xl font-bold text-[#3684DB] mb-4"
@@ -55,11 +55,11 @@ export function Projects() {
         functionality.
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-[#0e2a4d] rounded-xl shadow-lg overflow-hidden border border-[#3684DB]/30 hover:shadow-2xl transition h-[360px] flex flex-col"
+            className="bg-[#0e2a4d] rounded-xl shadow-lg overflow-hidden border border-[#3684DB]/30 hover:shadow-2xl transition flex flex-col h-auto min-h-[400px]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
@@ -73,10 +73,10 @@ export function Projects() {
               />
             </div>
             <div className="p-4 text-left flex-1 flex flex-col">
-              <h3 className="text-base font-semibold text-[#D1DDED] mb-0">
+              <h3 className="text-base font-semibold text-[#D1DDED] mb-2">
                 {project.title}
               </h3>
-              <p className="text-[#9DB5CB] text-sm mt-1 leading-tight line-clamp-8">
+              <p className="text-[#9DB5CB] text-sm leading-snug">
                 {project.description}
               </p>
             </div>
