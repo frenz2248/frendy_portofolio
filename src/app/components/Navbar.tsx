@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [active, setActive] = useState("hero");
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +54,7 @@ export function Navbar() {
         {/* Logo dan Nama */}
         <div className="flex items-center gap-2">
           <Image
-            src="/favicon.ico" // Pastikan file ada di /public/favicon.ico
+            src="/favicon.ico"
             alt="Logo"
             width={24}
             height={24}
@@ -61,8 +63,8 @@ export function Navbar() {
           <span className="text-[#3684DB] font-bold text-lg">Frendy</span>
         </div>
 
-        {/* Menu Navigasi */}
-        <ul className="flex gap-6 text-[#758BA5] text-sm">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6 text-[#758BA5] text-sm">
           {menuItems.map(({ id, label }) => (
             <li key={id}>
               <a
@@ -78,7 +80,33 @@ export function Navbar() {
             </li>
           ))}
         </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-[#031930] px-6 pb-4 space-y-2 text-[#D1DDED]">
+          {menuItems.map(({ id, label }) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={`block ${
+                active === id ? "text-[#3684DB] font-semibold" : ""
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      )}
     </motion.nav>
   );
 }

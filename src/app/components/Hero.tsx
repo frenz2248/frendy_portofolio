@@ -47,7 +47,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-gradient-to-br from-[#031930] via-[#062a50] to-[#0e2a4d] flex items-center px-4 md:px-10 lg:px-32 relative overflow-hidden"
+      className="min-h-screen pt-32 bg-gradient-to-br from-[#031930] via-[#062a50] to-[#0e2a4d] flex items-center px-4 md:px-10 lg:px-32 relative overflow-hidden"
     >
       <motion.div
         className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-[#3684DB]/30 rounded-full blur-3xl z-0"
