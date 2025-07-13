@@ -59,7 +59,7 @@ export function Projects() {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-[#0e2a4d] rounded-xl shadow-lg overflow-hidden border border-[#3684DB]/30 hover:shadow-2xl transition flex flex-col h-auto min-h-[400px]"
+            className="bg-[#0e2a4d] rounded-xl shadow-lg overflow-hidden border border-[#3684DB]/30 hover:shadow-2xl transition flex flex-col min-h-[300px] sm:min-h-[360px] lg:min-h-[400px]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
