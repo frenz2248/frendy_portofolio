@@ -1,11 +1,11 @@
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import { Skill } from "./components/Skill";
-import { Footer } from "./components/Footer";
-import { Navbar } from "./components/Navbar";
-import { MouseTrail } from "./components/MouseTrail";
+import { Hero } from "./components/main/Hero";
+import { About } from "./components/main/About";
+import { Projects } from "./components/main/Projects";
+import { Contact } from "./components/main/Contact";
+import { Skill } from "./components/main/Skill";
+import { Footer } from "./components/main/Footer";
+import { Navbar } from "./components/main/Navbar";
+import { MouseTrail } from "./components/main/MouseTrail";
 
 export default function HomePage() {
   return (

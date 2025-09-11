@@ -16,11 +16,11 @@ export function About() {
       label: "Name",
       value: "Frendy Ardiansyah",
     },
-    {
-      icon: <FaBirthdayCake className="text-[#3684DB]" />,
-      label: "Place and date of birth",
-      value: "Nganjuk, 16 February 2005",
-    },
+    // {
+    //   icon: <FaBirthdayCake className="text-[#3684DB]" />,
+    //   label: "Place and date of birth",
+    //   value: "Nganjuk, 16 February 2005",g
+    // },
     {
       icon: <FaGraduationCap className="text-[#3684DB]" />,
       label: "University",
