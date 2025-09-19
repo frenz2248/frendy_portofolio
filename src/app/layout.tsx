@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MouseProvider } from "@/context/MouseContext";
+import MusicPlayer from "./components/MusicPlayer";
 
 // Font config
 const geistSans = Geist({
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Frendy Portofolio",
+  title: "Frendy Portfolio",
   description:
     "Portofolio resmi Frendy Ardiansyah, Mahasiswa Teknik Komputer. Menampilkan proyek, skill, dan kontak secara profesional.",
   icons: {

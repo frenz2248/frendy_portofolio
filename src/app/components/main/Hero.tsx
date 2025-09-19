@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export function Hero() {
+export function Hero({ isAnimationActive }: { isAnimationActive: boolean }) {
   const phrases = [
     "Computer Engineering Student",
     "Web Developer",

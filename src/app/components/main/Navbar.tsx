@@ -48,7 +48,7 @@ export function Navbar() {
       className="fixed top-0 w-full bg-[#031930cc] backdrop-blur-md z-50 shadow-md"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 1 }}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo dan Nama */}
