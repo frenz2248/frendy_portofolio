@@ -135,13 +135,13 @@ export default function MusicPlayer({
     if (!isEnabled) return;
     const handleScroll = () => {
       if (!audioRef.current || isMuted) return;
-      fadeVolume(0.2, 200);
+      fadeVolume(0.1, 200);
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
       scrollTimeout.current = setTimeout(() => {
         if (audioRef.current && !isMuted) {
-          fadeVolume(volume, 300);
+          fadeVolume(volume, 200);
         }
-      }, 400);
+      }, 700);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
