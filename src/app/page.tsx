@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-// 1. Tambahkan AnimatePresence ke import framer-motion
 import { motion, AnimatePresence } from "framer-motion";
 import { Hero } from "./components/main/Hero";
 import { About } from "./components/main/About";
@@ -21,16 +20,10 @@ export default function HomePage() {
   };
 
   return (
-    // 2. Hapus properti motion dari <main>. Jadikan pembungkus statis.
     <main className="bg-[#031930] text-[#D1DDED] min-h-screen scroll-smooth relative overflow-hidden">
-      {/* MusicPlayer tetap di sini agar logikanya selalu aktif */}
       <MusicPlayer isEnabled={musicEnabled} onEnable={handleEnableMusic} />
-
-      {/* 3. Bungkus semua konten utama dengan AnimatePresence */}
       <AnimatePresence>
-        {/* 4. Tambahkan kondisi: hanya tampilkan jika musicEnabled adalah true */}
         {musicEnabled && (
-          // 5. Bungkus semua komponen dengan motion.div untuk animasi fade-in
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

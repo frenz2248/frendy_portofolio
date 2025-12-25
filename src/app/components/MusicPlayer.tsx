@@ -175,7 +175,7 @@ export default function MusicPlayer({
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed inset-0 z-[100] flex flex-col items-center justify-center 
+            className="fixed inset-0 [z-100] flex flex-col items-center justify-center 
                      px-6 text-center"
             style={{
               backgroundColor: "rgba(3, 25, 48, 0.85)",

@@ -17,9 +17,9 @@ const projects = [
     image: "/images/project2.png",
   },
   {
-    title: "village letter system",
+    title: "BEM Teknik Management System",
     description:
-      "A full-stack digital administration system for a village office, built with Next.js, Node.js/Express, and MySQL. This application allows residents to submit official letter requests online, which are then managed by staff through a dedicated admin dashboard with PDF generation capabilities.",
+      "A full-stack web application designed to digitize the operations of the Faculty of Engineering's Student Executive Board (BEM). Built with Next.js and Express.js, it features a dynamic CMS for content management, an automated recruitment system, and an interactive event dashboard.",
     image: "/images/project3.png",
   },
   {

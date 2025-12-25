@@ -1,16 +1,17 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export function Hero({ isAnimationActive }: { isAnimationActive: boolean }) {
   const phrases = [
     "Computer Engineering Student",
-    "Web Developer",
-    "FullStack Developer",
+    "Web Practitioner",
+    "FullStack Programmer",
     "Frontend Developer",
     "Backend Developer",
+    "UI/UX Enthusiast",
   ];
 
   const [currentPhrase, setCurrentPhrase] = useState(0);
@@ -50,7 +51,7 @@ export function Hero({ isAnimationActive }: { isAnimationActive: boolean }) {
       className="min-h-screen pt-32 bg-gradient-to-br from-[#031930] via-[#062a50] to-[#0e2a4d] flex items-center px-4 md:px-10 lg:px-32 relative overflow-hidden"
     >
       <motion.div
-        className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-[#3684DB]/30 rounded-full blur-3xl z-0"
+        className="absolute top-[-200px] left-[-200px] w-125 h-125 bg-[#3684DB]/30 rounded-full blur-3xl z-0"
         style={{
           transform: `translate(${mousePos.x * 0.01}px, ${
             mousePos.y * 0.01
@@ -59,7 +60,7 @@ export function Hero({ isAnimationActive }: { isAnimationActive: boolean }) {
       />
 
       <motion.div
-        className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-[#D1DDED]/10 rounded-full blur-2xl z-0"
+        className="absolute bottom-[-200px] right-[-200px] w-125 h-125 bg-[#D1DDED]/10 rounded-full blur-2xl z-0"
         style={{
           transform: `translate(${-mousePos.x * 0.01}px, ${
             -mousePos.y * 0.01
@@ -107,10 +108,15 @@ export function Hero({ isAnimationActive }: { isAnimationActive: boolean }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            I am a passionate and dedicated computer engineering student at
-            Islamic University of Kadiri with a strong foundation in software
-            development and hardware systems. I am eager to apply my skills to
-            solve real-world problems and contribute to innovative projects.
+            I am a Computer Engineering student at the Islamic University of
+            Kadiri with a strong interest in software development, web
+            development, and problem-solving. I have built a solid foundation in
+            programming and system analysis, and I continuously improve my
+            skills through academic projects, web-based applications, and
+            independent learning. I am highly motivated to apply my knowledge to
+            real-world challenges, collaborate effectively in team environments,
+            and contribute to innovative projects that deliver meaningful
+            impact.
           </motion.p>
 
           <motion.a

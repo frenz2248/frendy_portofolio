@@ -8,6 +8,7 @@ import {
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa";
+import { Github } from "lucide-react";
 
 // Animasi item
 const fadeInUp = {
@@ -92,6 +93,11 @@ export function Contact() {
             href: "https://www.instagram.com/frndyy.ard/",
             icon: <FaInstagram className="text-xl" />,
             text: "Instagram: @frndyy.ard",
+          },
+          {
+            href: "https://github.com/frenz2248",
+            icon: <Github className="text-xl" />,
+            text: "GitHub: frenz2248",
           },
         ].map((item, i) => (
           <motion.a
